@@ -886,6 +886,8 @@ body:not(.intro-ready) .hero-copy {
 }
 .stats {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
   gap: clamp(24px, 4vw, 56px);
   margin: 0 0 32px;
 }
@@ -1505,7 +1507,7 @@ body:not(.preload-complete) .custom-cursor {
   }
   .stack-card-0,
   .stack-card-1 {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .stack-card-1 .stack-card-media {
     order: 0;
