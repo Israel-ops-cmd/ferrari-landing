@@ -359,12 +359,6 @@ export default function Hero() {
       </div>
 
       <div className="portal-wrap chrome">
-        <div className="portal-heading">
-          <span>Próxima:</span>
-          <span>
-            <span>[0{next + 1}]</span> <strong>{nextScene.name}</strong>
-          </span>
-        </div>
         <button
           ref={portalRef}
           className="portal"

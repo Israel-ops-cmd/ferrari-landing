@@ -470,7 +470,7 @@ body:not(.intro-ready) .navbar .navbar-actions {
 }
 .hero-copy h1 {
   margin: 0 0 20px;
-  font-size: clamp(38px, 4.6vw, 72px);
+  font-size: clamp(34px, min(4.6vw, 7.4svh), 72px);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.035em;
@@ -533,7 +533,7 @@ body:not(.intro-ready) .navbar .navbar-actions {
 }
 .scene-title {
   margin: 0 0 -0.06em;
-  font-size: clamp(64px, 9vw, 168px);
+  font-size: clamp(56px, min(9vw, 17svh), 168px);
   font-weight: 900;
   line-height: 0.78;
   letter-spacing: -0.055em;
@@ -716,12 +716,13 @@ body:not(.intro-ready) .hero-copy {
 }
 
 /* Palavra por palavra */
+/* Folga em volta de cada palavra para o recorte da animação não cortar as letras. */
 .word {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
+  padding: 0.14em 0.12em 0.2em;
+  margin: -0.14em -0.12em -0.2em;
 }
 .word-inner {
   display: inline-block;
@@ -889,6 +890,7 @@ body:not(.intro-ready) .hero-copy {
   margin: 0 0 32px;
 }
 .stat strong {
+  white-space: nowrap;
   display: block;
   font-size: clamp(36px, 4.4vw, 64px);
   font-weight: 900;
@@ -896,7 +898,7 @@ body:not(.intro-ready) .hero-copy {
   letter-spacing: -0.04em;
   color: var(--white);
 }
-.stat span:last-child {
+.stat > span {
   font-size: 14px;
   color: var(--white-70);
 }
@@ -1190,6 +1192,8 @@ body:not(.intro-ready) .hero-copy {
 }
 .location-info .section-title {
   margin-bottom: 32px;
+  max-width: none;
+  font-size: clamp(36px, 4.4vw, 72px);
 }
 .location-info address {
   font-style: normal;
@@ -1270,6 +1274,7 @@ body:not(.intro-ready) .hero-copy {
   inset: 0;
   display: flex;
   align-items: center;
+  padding-top: var(--nav-h);
   background: var(--red);
   clip-path: circle(calc(4% + var(--m) * 96% * 1.5) at 72% 50%);
 }
@@ -1280,7 +1285,7 @@ body:not(.intro-ready) .hero-copy {
 .final-content h2 {
   margin: 0 0 24px;
   max-width: 12ch;
-  font-size: clamp(44px, 8vw, 132px);
+  font-size: clamp(44px, min(8vw, 13svh), 132px);
   font-weight: 900;
   line-height: 0.92;
   letter-spacing: -0.05em;
